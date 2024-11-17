@@ -7,6 +7,10 @@ const usr = process.env.MONGOUSR
 
 const app = express();
 
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 mongoose
   .connect(
     `mongodb+srv://${usr}:${pwd}@backenddb.dxxef.mongodb.net/micro-agent?retryWrites=true&w=majority&appName=backendDb`
