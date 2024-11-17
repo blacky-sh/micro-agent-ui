@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import logger from './middlewares/logger'
+import logger from './middlewares/logger.js'
+import settings from './routes/settings.js'
 
 const port = process.env.port 
 const pwd = process.env.MONGOPWD
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: false }));
 
 // Logger middleware to get colorized information in console for every request made to the server.
 app.use(logger);
+
+app.use("/settings", settings);
 
 mongoose
   .connect(
