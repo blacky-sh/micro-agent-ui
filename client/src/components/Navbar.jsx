@@ -18,14 +18,15 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn m-1 rounded-full w-12 h-12 p-2"
+              className="btn m-1 rounded-full w-12 h-12 p-2 bg-gray-100 hover:bg-gray-300"
             >
               {/* icon from svgrepo.com */}
-              <img src={menuIcon} alt="burger Menu" />
+              <img src={menuIcon} alt="burger Menu"  />
             </div>
+            
             <ul
               tabIndex={0}
-              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow text-black"
+              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow text-base-content"
             >
               <li>
                 <Link to={`/profile`}>My Profile</Link>
